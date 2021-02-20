@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Data Baru | COVID-19 Tracing App</title>
+	
+	<style>
+		header{
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 100%;
+			padding-left: 10px;
+			display: block;
+			color: white;
+			background-color: #0060a3;
+			font-size: 22px;
+			font-family: futura md bt;
+			text-align: left;
+		}
+		body{
+			padding-top: 100px;
+			padding-bottom: 110px;
+			padding-left: 30px;
+			padding-right: 30px;
+			display: block;
+			color: white;
+			background-color: #73c5ff;
+			font-size: 18px;
+			font-family: helvetica;
+			text-align: center;
+		}
+		input, textarea{
+			text-align: left;
+			font-size: 14px;
+			font-family: helvetica;
+			resize: none;
+		}
+		footer{
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			padding-left: 10px;
+			color: white;
+			background-color: #0060a3;
+			font-size: 14px;
+			font-family: futura md bt;
+			text-align: left;
+		}
+	</style>
+</head>
+
+<body>
+
+<header>
+	<table>
+	<tr>
+	<td>
+		<img src="{{ url_for('static', filename='wiku.jpg') }}" width="80" height="80">
+	</td>
+	<td>
+		<strong>
+		<p>
+			KKN UNS 118<br>
+			Desa Telukan
+		</p>
+		</strong>
+	</td>
+	</tr>
+	</table>
+</header>
+
+<div>
+	<h2>Tambah data baru</h2>
+	<br>
+	<p style="text-align: justify">
+		Terima kasih telah ikut serta membantu usaha melawan COVID-19. 
+		Semua data yang anda berikan hanya akan digunakan untuk kepentingan tracing penularan.<br>
+		Berikan data aktual anda dengan jujur.
+	</p>
+</div>
+	
+<div>
+	<p style="text-align: left">Lengkapi data berikut dengan informasi terbaru anda.</p>
+	<form action="{{ url_for('newData') }}" method="post">
+	<center>
+	<table style="text-align: left">
+		<tr>
+			<td><label id="nama">Nama Lengkap</label></td>
+			<td><input type="text" name="nama" id="nama" width="60"></td>
+		</tr>
+		<tr>
+			<td><label id="identitas">Jenis Identitas</label></td>
+			<td>
+				<select>
+					<option name="identitas" id="identitas" value="NIK">KTP/SIM/Kartu Keluarga</option>
+					<option name="identitas" id="identitas" value="Paspor">Paspor</option>
+					<option name="identitas" id="identitas" value="NISN">Nomor Induk Siswa Nasional</option>
+					<option name="identitas" id="identitas" value="Other">Lainnya</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td><label id="noID">No. Identitas</label></td>
+			<td><input type="text" name="noID" id="noID"></td>
+		</tr>
+		<tr>
+			<td><label id="lahir">Tanggal Lahir</label></td>
+			<td><input type="date" name="lahir" id="lahir"></td>
+		</tr>
+		<tr>
+			<td><label id="jk">Jenis Kelamin</label></td>
+			<td>
+				<input type="radio" name="jk" id="jk" value="Laki-laki"><label>Laki-laki</label>
+				<input type="radio" name="jk" id="jk" value="Perempuan"><label>Perempuan</label>
+			</td>
+		</tr>
+		<tr>
+			<td><label id="hasilTest">Hasil Test Terakhir</label></td>
+			<td>
+				<input type="radio" name="hasilTest" id="hasilTest" value="Positif"><label>Positif</label><br>
+				<input type="radio" name="hasilTest" id="hasilTest" value="Negatif"><label>Negatif</label><br>
+				<input type="radio" name="hasilTest" id="hasilTest" value="Negatif"><label>Belum Pernah Test</label>
+			</td>
+		</tr>
+		<tr>
+			<td><label id="alamat">Alamat Domisili</label></td>
+			<td><textarea name="alamat" id="alamat" rows="3" cols="40"></textarea></td>
+		</tr>
+	</table><br>
+	</center>
+	
+	<label id="kontak">Daftar Kontak Erat (1 Nama per Baris):</label><br>
+	<textarea name="kontak" id="kontak" cols="55" rows="10"></textarea><br>
+	<p style="font-size: 12px; color: red">
+		[PENTING!!] Sebelum mengirim, pastikan data yang anda masukkan sudah benar
+	</p>
+	
+	<button type="reset" name="reset">Reset</button>
+	<button type="submit" name="submit">Kirim</button>
+	</form>
+</div>
+
+<footer>
+	<table>
+	<tr>
+	<td>
+		<img src="{{ url_for('static', filename='logo uns.jpg') }}" width="80" height="80">
+	</td>
+	<td>
+		<p>
+			Contact:<br>
+			Instagram @kkntelukan118<br>
+			KKN UNS Kelompok 118<br>
+			Periode Januari-Februari 2021
+		</p>
+	</td>
+	</tr>
+	</table>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home | COVID-19 Tracing App</title>
+	
+	<style>
+		header{
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 100%;
+			padding-left: 10px;
+			display: block;
+			color: white;
+			background-color: #0060a3;
+			font-size: 22px;
+			font-family: futura md bt;
+			text-align: left;
+		}
+		body{
+			padding-top: 100px;
+			padding-bottom: 100px;
+			display: block;
+			color: white;
+			background-color: #73c5ff;
+			font-size: 18px;
+			font-family: helvetica;
+			text-align: center;
+		}
+		a{
+			color: inherit;
+			text-decoration: none;
+		}
+		a.hover{
+			color: inherit;
+			text-decoration: none;
+			cursor: pointer;
+		}
+		input, button{
+			text-align: left;
+			font-size: 14px;
+			font-family: helvetica;
+		}
+		footer{
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			padding-left: 10px;
+			color: white;
+			background-color: #0060a3;
+			font-size: 14px;
+			font-family: futura md bt;
+			text-align: left;
+		}
+	</style>
+</head>
+
+<body>
+
+<header>
+	<table>
+	<tr>
+	<td>
+		<img src="{{ url_for('static', filename='wiku.jpg') }}" width="80" height="80">
+	</td>
+	<td>
+		<strong>
+		<p>
+			KKN UNS 118<br>
+			Desa Telukan
+		</p>
+		</strong>
+	</td>
+	</tr>
+	</table>
+</header>
+
+<div>
+	<p style="font-size: 36px"><strong>COVID-19 Tracing App</strong></p>
+	<p style="padding-top: 0">Bersama lawan COVID-19</p>
+</div>
+
+<div>
+	<p>
+		<strong>Lihat status resiko untuk:</strong><br>
+		<input type="text" placeholder="Cari..." size="50"><br>
+		<button type="button" size="25">Lacak</button>
+	</p>
+</div>
+
+<div>
+	<p><strong>atau</strong></p>
+</div>
+
+<div>
+	<button type="button" href="/newData" name="dataBaru" size="25"><a href="{{ url_for('newData') }}">Data Baru</a></button>
+	<button type="button" name="editData" size="25">Edit Data</button>
+	<button type="button" name="lihatData" size="25">Lihat Data</button>
+	</form>
+</div>
+
+<footer>
+	<table>
+	<tr>
+	<td>
+		<img src="{{ url_for('static', filename='logo uns.jpg') }}" width="80" height="80">
+	</td>
+	<td>
+		<p>
+			Contact:<br>
+			Instagram @kkntelukan118<br>
+			KKN UNS Kelompok 118<br>
+			Periode Januari-Februari 2021
+		</p>
+	</td>
+	</tr>
+	</table>
+</footer>
+</body>
+</html>

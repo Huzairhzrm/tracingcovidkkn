@@ -1,0 +1,51 @@
+{
+    "nama": "test",
+    "noID": "123",
+    "lahir": "",
+    "alamat": "",
+    "kontak": "",
+    "submit": ""
+}{
+    "nama": "test1",
+    "noID": "234",
+    "lahir": "",
+    "alamat": "",
+    "kontak": "",
+    "submit": ""
+}{
+    "nama": "Anya Melfissa",
+    "noID": "69420",
+    "lahir": "",
+    "jk": "Perempuan",
+    "hasilTest": "Negatif",
+    "alamat": "-",
+    "kontak": "Reine Pavolia\r\nOllie Kureiji",
+    "submit": ""
+}{
+    "nama": "Anya Melfissa",
+    "noID": "69420",
+    "lahir": "1998-02-20",
+    "jk": "Perempuan",
+    "hasilTest": "Negatif",
+    "alamat": "-",
+    "kontak": "Reine Pavolia\r\nOllie Kureiji",
+    "submit": ""
+}{
+    "nama": "Anya Melfissa",
+    "noID": "69420",
+    "lahir": "1998-02-20",
+    "jk": "Perempuan",
+    "hasilTest": "Negatif",
+    "alamat": "-",
+    "kontak": "Reine Pavolia\r\nOllie Kureiji\r\nAirani Iofi",
+    "submit": ""
+}{
+    "nama": "Airani Iofi",
+    "noID": "42069",
+    "lahir": "2021-02-20",
+    "jk": "Perempuan",
+    "hasilTest": "Negatif",
+    "alamat": "-",
+    "kontak": "Ayunda Risu\r\nMoona Hoshinova\r\nAnya Melfissa",
+    "submit": ""
+}
